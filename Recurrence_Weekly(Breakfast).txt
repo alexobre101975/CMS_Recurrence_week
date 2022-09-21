@@ -1,0 +1,64 @@
+Recurrence semanal (Desayuno)
+
+genero una Automatizacion Usando La Recurrencia Semanal
+con las Siguientes Validaciones:
+1.- Informacion Completa Correctamente (Title,Description,Image etc)
+2.- Identificadores completos correctamente(Tags,Category(Breakfast),Activar Button Hide Print
+3.- completar las recurrencias correctamente
+	* Entrar boton de calendario
+	* avanzar al siguiente mes
+	* Regresar al mes actual
+	* Clic en el dia actual
+4.-La pestaña visible repite "Recurrencia diaria" e ingresa
+5.- Visible la ventana de Recurrencia
+	* Modificar los dias y las ocurrencias
+6.-Visible el mensaje Semanas modificadas y ocurrencias modificadas y las fechas coinciden con la Ventana    de Recurrencia de días
+7.- Grabar la Recurrencia (cierra ventana)
+8.-Verifica que el mensaje despues de cerrar la ventana de Recurrencias sea el mismo 
+* Importante:los dias marcados por default para esta recurrencia no se modifican
+9.-grabar la cena
+10.-Mensaje visible "Esta comida se ha agregado con éxito"
+11.- utilizar Reload page para eliminar la simulacion y tiempo de espera
+12.- entrar al simbolo de impresion y avanzar y que no sea visible la captura
+13.- eliminar la recurrencia de almuerzo utilizando JavaScript
+
+
+
+
+
+
+
+
+
+
+Weekly recurrence (Breakfast)
+
+Generate an Automation Using Weekly Recurrence
+with the Following Validations:
+1.- Complete Information Correctly (Title, Description, Image etc)
+2.- complete Identifiers correctly (Tags,Category(Breakfast),Activate Button Hide Print
+3.-complete Recurrences correctly
+	* Enter Botton Calendar
+	* advance month next
+	* Current BackMonth
+	* Click in current Day
+4.-Visible Tab Repets "Recurrence Daily" and Enter
+5.-Visible Window Recurrence
+	* Modify the days and occurrences
+6.-Visible el message Weeks modified and ocurrences modified and the dates agree with the days Recurrence    Window.
+7.-Save the Recurrencia (Window Close)
+8.-Verify that the message after closing the Recurrences window is the same
+* Important: the days marked by default for this recurrence are not modified
+9.-Save the dinner
+10.-Visible Message  "This Meal has been added succescfully"
+11.- use Reload page to eliminate the simulation and waiting time
+12.- enter the print symbol and move forward so that the capture is not visible
+13.- remove lunch recurrence using JavaScript
+
+
+
+
+
+
+
+
