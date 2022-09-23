@@ -2,29 +2,40 @@ Recurrence semanal (Desayuno)
 
 genero una Automatizacion Usando La Recurrencia Semanal
 con las Siguientes Validaciones:
+
+
+PR01 Automatización para ingresar a la Comunidad Waterford Recurrencia Semanal (Desayuno)
+
 1.- Informacion Completa Correctamente (Title,Description,Image etc)
-2.- Identificadores completos correctamente(Tags,Category(Breakfast),Activar Button Hide Print
+2.- Identificadores completos correctamente(Tags,Category Breakfast,Activar Button Hide Print)
 3.- completar las recurrencias correctamente
 	* Entrar boton de calendario
 	* avanzar al siguiente mes
-	* Regresar al mes actual
 	* Clic en el dia actual
 4.-La pestaña visible repite "Recurrencia diaria" e ingresa
 5.- Visible la ventana de Recurrencia
 	* Modificar los dias y las ocurrencias
-6.-Visible el mensaje Semanas modificadas y ocurrencias modificadas y las fechas coinciden con la Ventana    de Recurrencia de días
+6.-Visible el mensaje Semanas modificadas y ocurrencias modificadas y las fechas coinciden con la Ventana de Recurrencia de días
 7.- Grabar la Recurrencia (cierra ventana)
-8.-Verifica que el mensaje despues de cerrar la ventana de Recurrencias sea el mismo 
+8.-Verifica que el mensaje despues de cerrar la ventana de Recurrencias sea el mismo
+
 * Importante:los dias marcados por default para esta recurrencia no se modifican
-9.-grabar la cena
+9.-grabar el desayuno
 10.-Mensaje visible "Esta comida se ha agregado con éxito"
 11.- utilizar Reload page para eliminar la simulacion y tiempo de espera
-12.- entrar al simbolo de impresion y avanzar y que no sea visible la captura
+12.- entrar al simbolo de impresion y avanzar y que sea visible la captura
 13.- eliminar la recurrencia de almuerzo utilizando JavaScript
 
 
 
+nota:
+${Dinning}                  document.getElementById('SideNav_Menu_Dinning').click()
+${Add Menu Item}            document.getElementById('dining_new_dining_btn').click()
+aqui se utilizo Jascript para evitarnos el error de que se detenia en estas 2 partes de la automatizacion
 
+${Lemonade}                 //div[contains(text(),'Lemonade')]
+${Yes,DeleteAllOccurrences}    //div[contains(text(),'Yes, Delete All Occurrences')]
+nota: se generaron Xpath utilizando nombre para que no de error
 
 
 
@@ -33,14 +44,15 @@ con las Siguientes Validaciones:
 
 Weekly recurrence (Breakfast)
 
+PR01 Automation to enter Community Waterford Recurrence Weekly (Breakfast)
+
 Generate an Automation Using Weekly Recurrence
 with the Following Validations:
 1.- Complete Information Correctly (Title, Description, Image etc)
-2.- complete Identifiers correctly (Tags,Category(Breakfast),Activate Button Hide Print
+2.- complete Identifiers correctly (Tags,Category(Breakfast),Activate Button Hide Print)
 3.-complete Recurrences correctly
 	* Enter Botton Calendar
 	* advance month next
-	* Current BackMonth
 	* Click in current Day
 4.-Visible Tab Repets "Recurrence Daily" and Enter
 5.-Visible Window Recurrence
@@ -52,13 +64,17 @@ with the Following Validations:
 9.-Save the dinner
 10.-Visible Message  "This Meal has been added succescfully"
 11.- use Reload page to eliminate the simulation and waiting time
-12.- enter the print symbol and move forward so that the capture is not visible
+12.- enter the print symbol and move forward so that the capture is visible
 13.- remove lunch recurrence using JavaScript
 
 
 
+note:
+$ {Dinning} document.getementbyid ('Sidenav_menu_dinning'). Click ()
+$ {Add Menu Item} document.getementbyid ('nining_new_dining_btn'). Click ()
+Jascript was used here to avoid the error that was stopped in these 2 parts of automation
 
-
-
-
+${Lemonade}                 //div[contains(text(),'Lemonade')]
+${Yes,DeleteAllOccurrences}    //div[contains(text(),'Yes, Delete All Occurrences')]
+note: XPath was generated using name so that no error
 

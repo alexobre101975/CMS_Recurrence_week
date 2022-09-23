@@ -11,8 +11,8 @@ Resource    Resources/Keywords.resource
 
 *** Test Cases ***
 
-PR01 Automation to enter Community Waterford Recurrence Weekly
-        [Tags]      Validation Test       Case 1
+PR02 Automation to enter Community Waterford Recurrence Weekly (Lunch)
+        [Tags]      Validation Test       Case 2
 
 # Open Community Waterford Engage360
      Click Element    ${Community}
@@ -56,6 +56,9 @@ PR01 Automation to enter Community Waterford Recurrence Weekly
 
 # visible the Image
     Execute Javascript              window.scrollTo(0,document.body.scrollHeight)
+
+
+
 
 
 # complete Identifiers correctly
@@ -128,44 +131,72 @@ PR01 Automation to enter Community Waterford Recurrence Weekly
 # Reload page to eliminate waiting and code simulation
       reload page
 
-# Click Date Served Visible the date of the last Lunch captured
-    scroll element into view                 ${Date Served}
-    wait until element is visible            ${Date Served}
-    element should be visible                ${Date Served}             Date Served
-    click element      ${Date Served}
-
 # Click Print Visible the capture Dinning
       scroll element into view                 ${Log_Print}
       wait until element is visible            ${Log_Print}
       set focus to element                     ${Log_Print}
       click button                             ${Log_Print}
-     sleep      5
+
+
 # Next Verify Print Dinning
      click element               ${right_arrow}
+     Sleep      1
+     click element               ${right_arrow}
+     sleep      1
      double click element        ${right_arrow}
+     sleep      1
      click element               ${right_arrow}
+     sleep      1
      click element               ${right_arrow}
-     Execute Javascript     window.scrollTo(0,500)
 
-    # Close Print Window
+
+# Close Print Window
     click element      ${Print_Close}
 
-# enter a captured Meal
-     execute javascript        document.getElementsByClassName('MuiGrid-root rowEngageStyleList MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-center')[0].click()
+    # enter a captured Meal
+    scroll element into view           ${Ultimate Veggie Burger}
+    click element                      ${Ultimate Veggie Burger}
+
 
  # Simulate enter to Calendar
-      wait until element is visible           ${Start-Date}
+      scroll element into view                ${Start-Date}
       set focus to element                    ${Start-Date}
       mouse down                              ${Start-Date}
 
-# Delete the capture of a Lunch and the recurrence
+# Enter Delete button Confirm Delete Menu Item
     wait until element is visible       ${Delete_Dinning}
     set focus to element                ${Delete_Dinning}
     click element                       ${Delete_Dinning}
 
-# Delete Lunch
-  execute javascript                  document.getElementsByClassName('MuiGrid-root alingCenter MuiGrid-container MuiGrid-item')[8].click()
+# Click Button "No, Exit"
+    click element               ${Button No,Exit}
 
+ # Simulate enter to Calendar
+      scroll element into view                ${Start-Date}
+      set focus to element                    ${Start-Date}
+      mouse down                              ${Start-Date}
 
+# Enter Delete button Confirm Delete Menu Item
+    wait until element is visible       ${Delete_Dinning}
+    set focus to element                ${Delete_Dinning}
+    click element                       ${Delete_Dinning}
+
+# Click Button "Yes, Delete This Ocurrences"
+    click element               ${Yes,DeleteThisOccurrence}
+
+# Reload page to eliminate waiting and code simulation
+     reload page
+
+# enter a captured Meal
+    scroll element into view            ${Ultimate Veggie Burger}
+    click element                       ${Ultimate Veggie Burger}
+
+# Enter Delete button Confirm Delete Menu Item
+    wait until element is visible       ${Delete_Dinning}
+    set focus to element                ${Delete_Dinning}
+    click element                       ${Delete_Dinning}
+
+# Click Button "Yes,DeleteAllOccurrences"
+    click element              ${Yes,DeleteAllOccurrences}
 
 

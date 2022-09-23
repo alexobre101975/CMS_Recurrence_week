@@ -1,0 +1,93 @@
+Recurrence semanal (Comida)
+PR02 Automatización para entrar en Community Waterford Recurrencia Semanal (Comida)
+
+genero una Automatizacion Usando La Recurrencia Semanal
+con las Siguientes Validaciones:
+
+1.- Informacion Completa Correctamente (Title,Description,Image,Tags,Category)
+2.- Activar Button Hide Print y Desactivar 
+3.- Clic Recurrencia semanal 
+4.- Modificar los días para las recurrencias semanales
+5.- Modificar los días y ocurrencias
+6.- Que sea grabada la recurrencias semanal en la categoria de Comida
+7.- Esperar Visible el mensaje "This meal has been added succesfully"
+8.- Recargar la pagina para eliminar espera
+9.- Haga clic en el boton Imprimir y sean Visibles las capturas en la hoja de impresion
+10.- Cerrar la pagina de Impresion
+11.- Regresan a la captura creada y entrar en ella
+12.- Entrar al boton de Borrar Confirmar Borrado Elemento Menú
+13.- Dar clic en el boton en el boton de NO,EXIT
+14.- Entrar nuevamente  al boton de Borrar Confirmar Borrado Elemento Menú
+15.- Dar Clic en el boton de "Yes, Delete This Ocurrences" y eliminar solo esa captura
+16.- Recargar la pagina para eliminar la espera
+17.- Regresar y entrar a otra captura y entrar al boton de Borrar Confirmar Borrado Elemento Menú
+18.- Clic Boton de "Yes, Delete All Ocurrences" y se eliminenen todas las capturas creadas anteriormente
+
+
+
+nota:
+Se utilizo Xpath para entrar a la captura creda y evitar Javascript el cual el codigo era muy largo
+${Ultimate Veggie Burger}      //div[contains(text(),'Ultimate Veggie Burger')]
+
+
+Nota: se utilizo execute javascript para entrar a la captura.
+      se utiizo Choose File para modificar los dias y las ocurrencias
+      se utilizo Press Keys para dar enter en los tags
+      se utilizo scroll element into view para Subir o bajar a un elemento
+
+Nota:
+$ {Comida} document.getementbyid ('Sidenav_menu_dinning'). Haga clic en ()
+$ {Agregar elemento de menú} document.getementbyid ('nining_new_dining_btn'). Haga clic en ()
+Aquí se usó Javasript para evitar el error que se detuvo en estas 2 partes de la automatización.
+
+
+
+
+
+
+
+
+
+Weekly Recurrence (Lunch)
+PR02 Automation to enter Community Waterford Weekly Recurrence (Lunch)
+
+Generate an Automation Using Weekly Recurrence
+with the Following Validations:
+
+1.- Complete Information Correctly (Title, Description, Image, Tags, Category)
+2.- Activate Button Hide Print and Deactivate
+3.- Click Weekly recurrence
+4.- Modify the days for weekly recurrences
+5.- Modify the days and occurrences
+6.- That the weekly recurrences in the Food category be recorded
+7.- Wait Visible the message "This meal has been added succesfully"
+8.- Reload the page to eliminate waiting
+9.- Click on the Print button and the captures are visible on the print sheet
+10.- Close the Impression page
+11.- Return to the capture created and enter it
+12.- Enter the Delete button Confirm Delete Menu Item
+13.- Click on the NO button, EXIT
+14.- Enter the Delete button again Confirm Delete Menu Element
+15.- Click on the "Yes, Delete This Occurrences" button and delete only that capture
+16.- Reload the page to eliminate the wait
+17.- Go back and enter another capture and enter the Delete button Confirm Delete Menu Element
+18.- Click the "Yes, Delete All Occurrences" button and all the captures created previously are deleted
+
+
+
+note:
+Xpath was used to enter the creda capture and avoid Javascript which the code was very long
+${Ultimate Veggie Burger} //div[contains(text(),'Ultimate Veggie Burger')]
+
+
+
+
+
+Note: execute javascript was used to enter the capture.
+      Choose File was used to modify the days and occurrences
+      Press Keys was used to enter the tags
+      scroll element into view was used to move up or down to an element
+Note:
+${Dining} document.getementbyid('Sidenav_menu_dinning'). Click on ()
+${Add Menu Item} document.getementbyid('nining_new_dining_btn'). Click on ()
+Javascript was used here to avoid the error that stopped at these 2 parts of the automation.

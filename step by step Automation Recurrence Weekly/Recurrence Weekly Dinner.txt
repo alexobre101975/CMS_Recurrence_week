@@ -1,0 +1,119 @@
+Cena Semanal de Recurrencia
+PR03 Automatización para ingresar a la Comunidad Waterford Recurrencia Semanal (Cena)
+
+1.- Completar la informacion general correctamente para recurrencia categoria cena
+    (Titulo,Descripcion e imagen).
+
+2.- Completar correctamente los indetificadores
+    (Etiquetas, Categoría de comida, Ocultar en impresión)
+	* Insertar 3 etiquetas
+	* Seleccionar Categoria de Cena
+	* Seleccionar Ocultar al imprimir.
+
+3.-completar las recurrencias correctamente
+	* Entrar en el calendario inferior
+	* avance dos meses (flecha derecha)
+	* Retroceder un mes (flecha izquierda)
+	* Modificar fecha,(mes y dia)
+	* Fecha Repeticiones Introducir recurrencia semanal
+	* Modificar los días para las recurrencias semanales
+      # domingo, miércoles, sábado
+	* Modificar cada semana (disminuir el número de semanas)
+	* Aumentar Ocurrencias
+	* Visible el mensaje Semanas modificadas y ocurrencias modificadas y las fechas coinciden con los días Ventana de recurrencia
+	* Grabar Recurrencia
+	* Verifique que el mensaje después de cerrar la ventana Recurrencias sea el mismo que el de Recurrencias en Repeticiones (semanales)
+	* Grabar Cena
+	* Esperar Mensaje de aceptacion This meal has been added succesfully
+
+4.- Recargar la pagina para eliminar espera
+
+5.-entrar el Logo Impresion y no sean Visibles las capturas de Dinning
+    * cerrar la pagina de impresion
+
+6.-entrar a una captura de cena creada
+
+7.-Eliminar la captura de una cena y la recurrencia dando clic boton "Yes,DeleteAllOccurrences"
+
+
+
+nota:
+    se utilizo Xpath para entrar a cualquier dia del mes aun no cuenta con ID
+    ${New_day}                      //p[contains(text(),'15')]
+    se utilizo xpath para confirmar el mensaje fuera de la ventana de recurrencia sea igual falta ID
+    ${Mess_Recu_Window2}        //div[contains(text(),'Sunday, Wednesday, Saturday ')]
+    se utilizo  xpath para entrar a la captura creada usando el nombre del meal y no falle al momento de buscarla
+    ${BBQ Ribs}                     //div[contains(text(),'BBQ Ribs')]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Weekly Recurrence Dinner
+PR03 Automation to enter the Waterford Community Weekly Recurrence (Dinner)
+
+1.- Complete the general information correctly for dinner category recurrence
+    (Title, Description and image).
+
+2.- Correctly complete the identifiers
+    (Labels, Food Category, Hide in Print)
+* Insert 3 labels
+* Select Dinner Category
+* Select Hide when printing.
+
+3.-complete the recurrences correctly
+* Enter the calendar below
+* forward two months (right arrow)
+* Go back one month (left arrow)
+* Modify date, (month and day)
+* Date Repetitions Enter weekly recurrence
+* Modify the days for weekly recurrences
+      # sunday, wednesday, saturday
+* Modify every week (decrease the number of weeks)
+* Increase Occurrences
+* Visible the message Modified weeks and modified occurrences and the dates coincide with the days Recurrence window
+* Record Recurrence
+* Verify that the message after closing the Recurrences window is the same as the Recurrences in Recurrences (weekly)
+* Record Dinner
+* Wait Acceptance message This meal has been added succesfully
+
+4.- Reload the page to eliminate waiting
+
+5.-enter the Printing Logo and the Dinning screenshots are not visible
+    * close the print page
+
+6.-enter a dinner capture created
+
+7.-Delete the capture of a dinner and the recurrence by clicking the "Yes,DeleteAllOccurrences" button
+
+
+
+note:
+    Xpath was used to enter any day of the month, it still does not have an ID
+    ${New_day} //p[contains(text(),'15')]
+    xpath was used to confirm the message outside the recurrence window is the same ID is missing
+    ${Mess_Recu_Window2} //div[contains(text(),'Sunday, Wednesday, Saturday ')]
+    xpath was used to enter the capture created using the name of the meal and it did not fail when searching for it
+    ${BBQ Ribs} //div[contains(text(),'BBQ Ribs')]
+
+
+
+
+
+
+
+
+
+
+

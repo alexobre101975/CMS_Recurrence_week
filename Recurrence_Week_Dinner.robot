@@ -11,8 +11,8 @@ Resource    Resources/Keywords.resource
 
 *** Test Cases ***
 
-PR01 Automation to enter Community Waterford Recurrence Weekly (Dinner)
-        [Tags]      Validation Test       Case 1
+PR03 Automation to enter Community Waterford Recurrence Weekly (Dinner)
+        [Tags]      Validation Test       Case 3
 
 # Open Community Waterford Engage360
      Click Element    ${Community}
@@ -67,7 +67,7 @@ PR01 Automation to enter Community Waterford Recurrence Weekly (Dinner)
 
 # complete Identifiers correctly
 
-
+# Go up to the labels tab
    scroll element into view            ${tags}
 
 # Text tags
@@ -107,7 +107,9 @@ PR01 Automation to enter Community Waterford Recurrence Weekly (Dinner)
     click element       ${back_month}
 
 # Modify Date New Month and new day
-    execute javascript      document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[20].click()
+
+    double click element        ${New_day}
+    #execute javascript      document.getElementsByClassName('MuiButtonBase-root MuiIconButton-root MuiPickersDay-day')[20].click()
 
 # Tab Repets
 #"Recurrence Weekly" and Enter
@@ -130,8 +132,8 @@ PR01 Automation to enter Community Waterford Recurrence Weekly (Dinner)
      choose file                     ${modify_Occurrences}      10
 
 # Visible el message Weeks modified and ocurrences modified and the dates agree with the days Recurrence Window
-    wait until element is visible       //div[contains(text(),'Sunday, Wednesday, Saturday ')]
-    element should contain              //div[contains(text(),'Sunday, Wednesday, Saturday ')]     Occurs every week on  Sunday, Wednesday, Saturday
+    wait until element is visible       ${Mess_Recu_Window}
+    element should contain              ${Mess_Recu_Window}    Occurs every week on  Sunday, Wednesday, Saturday
 
 # Click Save button Recurrence
      wait until element is visible           ${SaveRecurrence}
@@ -139,8 +141,8 @@ PR01 Automation to enter Community Waterford Recurrence Weekly (Dinner)
      click element                           ${SaveRecurrence}
 
 # Verify that the message after closing the Recurrences window is the same as the one in Recurrences under Repeats(Weekly)
-    wait until element is visible       //div[contains(text(),'Sunday, Wednesday, Saturday ')]
-    element should contain              //div[contains(text(),'Sunday, Wednesday, Saturday ')]     Occurs every week on  Sunday, Wednesday, Saturday
+    wait until element is visible       ${Mess_Recu_Window2}
+    element should contain              ${Mess_Recu_Window2}     Occurs every week on  Sunday, Wednesday, Saturday
 
 # Click Save Button Dinning
      wait until element is visible           ${Save Dining}
@@ -154,43 +156,31 @@ PR01 Automation to enter Community Waterford Recurrence Weekly (Dinner)
 # Reload page to eliminate waiting and code simulation
       reload page
 
-# Click Date Served Visible the date of the last dinner captured
-    scroll element into view                 ${Date Served}
-    wait until element is visible            ${Date Served}
-    element should be visible                ${Date Served}             Date Served
-    click element      ${Date Served}
-
 # Click Print Visible the capture Dinning
       scroll element into view                 ${Log_Print}
       wait until element is visible            ${Log_Print}
       set focus to element                     ${Log_Print}
       click button                             ${Log_Print}
 
-# Next Verify Print Dinning
-     click element               ${right_arrow}
-     double click element        ${right_arrow}
-     click element               ${right_arrow}
-     click element               ${right_arrow}
-     scroll element into view           //*[@id="containerDiningMenuContentImageIndividualElements"]/div[3]/div/div[3]/div[2]/div[7]/div/div
-
 
     # Close Print Window
-    click element      ${Print_Close}
+     click element      ${Print_Close}
+
 
 # enter a captured Meal
-     execute javascript        document.getElementsByClassName('MuiGrid-root rowEngageStyleList MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-center')[0].click()
+    scroll element into view           ${BBQ Ribs}
+    click element                      ${BBQ Ribs}
 
  # Simulate enter to Calendar
       wait until element is visible           ${Start-Date}
       set focus to element                    ${Start-Date}
       mouse down                              ${Start-Date}
 
-# Delete the capture of a dinner and the recurrence
+# Enter Delete button Confirm Delete Menu Item
     wait until element is visible       ${Delete_Dinning}
     set focus to element                ${Delete_Dinning}
     click element                       ${Delete_Dinning}
 
-# Delete Dinner
-  execute javascript                  document.getElementsByClassName('MuiGrid-root alingCenter MuiGrid-container MuiGrid-item')[8].click()
-
+# Click Button "Yes,DeleteAllOccurrences"
+    click element              ${Yes,DeleteAllOccurrences}
 

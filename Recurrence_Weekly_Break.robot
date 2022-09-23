@@ -14,10 +14,12 @@ Resource    Resources/Keywords.resource
 PR01 Automation to enter Community Waterford Recurrence Weekly (Breakfast)
         [Tags]      Validation Test       Case 1
 
+
 # Open Community Waterford Engage360
      Click Element    ${Community}
      Drag And Drop    ${Waterford}      ${Community}
      Click Element    ${Waterford}
+
 #  Enter Dinning Window
      execute javascript           ${Dinning}
 
@@ -78,11 +80,11 @@ PR01 Automation to enter Community Waterford Recurrence Weekly (Breakfast)
     wait until element is visible       ${Breakfast}
 
 # Select and Unselect Button Hide On Print
-    select checkbox     ${Hide_Print}
+    select checkbox          ${Hide_Print}
     unselect checkbox        ${Hide_Print}
-
-
-
+#
+#
+#
 
 
 
@@ -100,7 +102,7 @@ PR01 Automation to enter Community Waterford Recurrence Weekly (Breakfast)
 
 
 # Click in current Day
-    double click element      id=Calendar_Icon_Adornment_20
+    Double click element      ${Current_day}
 
 
 # Visible Tab Repets "Recurrence Daily" and Enter
@@ -127,8 +129,8 @@ PR01 Automation to enter Community Waterford Recurrence Weekly (Breakfast)
      click element                           ${SaveRecurrence}
 
 # Verify that the message after closing the Recurrences window is the same as the one in Recurrences under Repeats(Weekly)
-    wait until element is visible       ${Mess_Recu_Window}
-    element should contain              ${Mess_Recu_Window}      Occurs every 2 weeks on  Monday, Wednesday, Friday
+    wait until element is visible       ${Mess_Recu_Window1}
+    element should contain              ${Mess_Recu_Window1}      Occurs every 2 weeks on  Monday, Wednesday, Friday
 
  # enter to Calendar
       wait until element is visible           ${Start-Date}
@@ -149,12 +151,6 @@ PR01 Automation to enter Community Waterford Recurrence Weekly (Breakfast)
 # Reload page to eliminate waiting and code simulation
       reload page
 
-# Click Date Served Visible the date of the last breakfast captured
-    scroll element into view                 ${Date Served}
-    wait until element is visible            ${Date Served}
-    element should be visible                ${Date Served}             Date Served
-    click element      ${Date Served}
-
 
 # Click Print Visible the capture Dinning
       scroll element into view                 ${Log_Print}
@@ -165,18 +161,13 @@ PR01 Automation to enter Community Waterford Recurrence Weekly (Breakfast)
 # Next Verify Print Dinning
      click element               ${right_arrow}
 
-#     double click element        ${right_arrow}
-#
-#     click element               ${right_arrow}
-#
-#     click element               ${right_arrow}
-#     scroll element into view    ${right_arrow}
 
     # Close Print Window
      click element      ${Print_Close}
 
-# enter a captured Meal
-     execute javascript        document.getElementsByClassName('MuiGrid-root rowEngageStyleList MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-center')[0].click()
+## enter a captured Meal
+    scroll element into view        ${Lemonade}
+    click element                   ${Lemonade}
 
  # Simulate enter to Calendar
       wait until element is visible           ${Start-Date}
@@ -188,7 +179,6 @@ PR01 Automation to enter Community Waterford Recurrence Weekly (Breakfast)
     set focus to element                ${Delete_Dinning}
     click element                       ${Delete_Dinning}
 
-# Delete Breakfast
-  execute javascript                  document.getElementsByClassName('MuiGrid-root alingCenter MuiGrid-container MuiGrid-item')[8].click()
-
-
+# Click button Yes,Delete All Ocurrences
+    scroll element into view            ${Yes,DeleteAllOccurrences}
+    click element                       ${Yes,DeleteAllOccurrences}
